@@ -1,0 +1,616 @@
+:root{
+    --verde: #84CC16;
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #1B1715;
+    --grisClaro: #828282;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+span{
+    color: var(--verde);
+    transition: 0.3s;
+}
+
+span:hover{
+    text-shadow: var(--verde) 0px 0px 6px;
+}
+
+/* Estilo para los enlaces <a> */
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Ajusta según tu diseño */
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    color: var(--blanco);
+    transition: color 0.4s;
+}
+
+header h1 {
+    animation: slideIn 1s ease-out;
+}
+
+/* Efecto especial en la parte <span> */
+header h1 span {
+    color: var(--verde);
+    transition: transform 0.4s;
+    display: inline-block;
+}
+
+/* Efecto de rebote en el hover del <span> */
+header h1:hover span {
+    transform: scale(1.1);
+}
+
+/* Header general */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+/* Estilo para la navegación */
+header .navegacion ul {
+    display: flex;
+    padding: 0 200px;
+}
+
+header .navegacion ul li {
+    margin: 0 15px;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .navegacion ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Espacio debajo de la línea */
+    width: 0;
+    height: 2px;
+    background-color: var(--verde);
+    transition: width 0.3s ease;
+}
+
+header .navegacion ul li:hover::after {
+    width: 100%; /* La línea se expande a través del texto */
+}
+
+header .navegacion ul li a{
+    color: var(--blanco);
+}
+
+/* Animación de hover */
+header .navegacion ul li a:hover {
+    color: var(--verde);
+    cursor: pointer;
+}
+
+header button {
+    padding: 10px 25px;
+    background: linear-gradient(90deg, var(--verde) 0%, #0bb848 100%);
+    color: var(--negro);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, background 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Efecto de hover dinámico */
+header button:hover {
+    background: linear-gradient(90deg, #0bb848 0%, var(--verde) 100%);
+    transform: translateY(-3px);
+}
+
+/* Efecto al hacer clic */
+header button:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del enlace dentro del botón */
+header button a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 700;
+    transition: color 0.4s;
+}
+
+header button a:hover {
+    color: var(--negro);
+}
+
+.limeCode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.limeCode img{
+    width: 500px;
+    border-radius: 10px;
+}
+
+.limeCode .informacionLime{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.limeCode .informacionLime h2{
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.limeCode .informacionLime p{
+    font-size: 18px;
+}
+
+.limeCode .informacionLime button {
+    background: linear-gradient(90deg, var(--verde) 0%, #0bb848 100%);
+    font-weight: 600;
+    padding: 10px 25px;
+    width: 160px;
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s, background 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Efecto de hover dinámico */
+.limeCode .informacionLime button:hover {
+    background: linear-gradient(90deg, #0bb848 0%, var(--verde) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al hacer clic */
+.limeCode .informacionLime button:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.contactos{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+    background-color: var(--gris);
+}
+
+.contactos .comunicacion{
+    display: flex;
+    gap: 30px;
+}
+
+.contactos .comunicacion a{
+    color: var(--blanco);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contactos .redes{
+    display: flex;
+    gap: 25px;
+}
+
+.contactos .redes i{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contactos .redes i:nth-child(1):hover{
+    color: #0300CA ;
+    text-shadow: #fff 0px 0px 4px;
+    transform: scale(1.5);
+}
+
+.contactos .redes i:nth-child(2):hover{
+    color: #000 ;
+    text-shadow: #fff 0px 0px 4px;
+    transform: scale(1.5);
+} 
+
+.contactos .redes i:nth-child(3):hover{
+    color: #CC4C47 ;
+    text-shadow: #fff 0px 0px 4px;
+    transform: scale(1.5);
+} 
+
+.contactos .redes i:nth-child(4):hover{
+    color: #D90D1E ;
+    text-shadow: #fff 0px 0px 4px;
+    transform: scale(1.5);
+}
+
+.categorias{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.categorias .header_categorias{
+    text-align: center;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categorias .header_categorias > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias .header_categorias h2{
+    font-weight: 800;
+}
+
+.categorias .tarjetas_categorias{
+    display: flex;
+    margin: 40px 50px;
+    gap: 20px;
+}
+
+.categorias .tarjetas_categorias .tarjeta{
+    background-color: var(--gris);
+    padding: 25px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 7px;
+}
+
+.categorias .tarjetas_categorias .tarjeta i{
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--verde);
+}
+
+.categorias .tarjetas_categorias .tarjeta h3{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.categorias .tarjetas_categorias .tarjeta p{
+    font-size: 15px;
+}
+
+.seccion_ingreso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo general para las tarjetas */
+.card {
+    margin-top: 60px;
+    width: 400px; /* Ajusta el tamaño de la tarjeta */
+    height: 700px;
+    perspective: 1000px;
+    position: relative; /* Esto asegura que los elementos dentro de la tarjeta se posicionen bien */
+}
+
+/* Contenido de la tarjeta */
+.card div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Esto es necesario para la animación de flip */
+    transition: transform 0.6s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilos para la parte frontal */
+.card-front {
+    background-color: var(--gris);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la parte posterior */
+.card-back {
+    background-color: var(--gris);
+    color: var(--blanco);
+    transform: rotateY(180deg); /* Volteo de la tarjeta */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido no quede debajo de otras capas */
+}
+
+/* Información del usuario */
+#userInfo {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    padding-right: 10px;
+    padding: 40px;
+    color: var(--blanco);
+}
+
+/* Párrafos del contenido */
+#userInfo p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#userInfo strong {
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/* Estilos para el botón de Volver */
+#backButton {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--verde);
+    color: var(--negro);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+    z-index: 2; /* Asegura que el botón esté encima del contenido */
+}
+
+/* Hover del botón Volver */
+#backButton:hover {
+    color: var(--blanco);
+    transform: scale(1.05);
+}
+
+/* Animación de flip */
+.card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(360deg);
+}
+
+/* Estilos del formulario (parte frontal) */
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto; /* Asegura que el formulario esté centrado */
+}
+
+/* Estilo para los labels */
+form label {
+    font-size: 14px;
+    color: var(--blanco);
+}
+
+/* Estilos para los inputs y selects */
+form input,
+form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--gris);
+    border-radius: 7px;
+    background-color: #372f2a;
+    color: var(--blanco);
+    outline: none;
+}
+
+/* Foco de los inputs */
+form input:hover,
+form select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 5px var(--verde);
+    transition: 0.5s;
+}
+
+/* Botón de enviar */
+form button {
+    padding: 10px;
+    background-color: var(--verde);
+    color: var(--negro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover del botón de enviar */
+form button:hover {
+    color: var(--blanco);
+    transform: scale(1.05);
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--gris); /* Fondo gris */
+    color: var(--blanco); /* Texto blanco */
+    padding: 40px 20px;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--verde); /* Título verde */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--verde); /* Hover verde */
+}
+
+/* Estilos para los iconos sociales */
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.social-icons li {
+    font-size: 15px;
+}
+
+.social-icons a {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons li:nth-child(1) a:hover {
+    color: #0400e4;
+}
+.social-icons li:nth-child(2) a:hover {
+    color: aqua;
+}
+.social-icons li:nth-child(3) a:hover {
+    color: #CC4C47;
+}
+.social-icons li:nth-child(4) a:hover {
+    color: rgb(75, 81, 255);
+}
+
+/* Estilo del formulario de suscripción */
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    background-color: #372f2a;
+    border: 1px solid var(--gris);
+    color: var(--blanco);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+footer input[type="email"]:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 8px var(--verde);
+}
+
+footer button {
+    padding: 10px;
+    background-color: var(--verde);
+    color: var(--negro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+footer button:hover {
+    background-color: var(--grisClaro);
+    color: var(--blanco);
+    transform: scale(1.05);
+}
+
+/* Estilo de la parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--grisClaro);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
